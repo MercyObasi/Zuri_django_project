@@ -17,3 +17,5 @@ class LyricSerializer(serializers.ModelSerializer):
         model = Lyric
         fields = '__all__'
         
+        def __str__(self):
+            return "{} - {}".format(self.song.title, self.song.artiste)
